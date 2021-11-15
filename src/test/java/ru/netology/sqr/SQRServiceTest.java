@@ -13,9 +13,9 @@ class SQRServiceTest {
                     "'Square of number larger than the range', 0, 99, 0",
                     "'Square of number smaller than the range', 10001, 2147483647, 0"}
     )
-    void sqrcounter(String test, int minimum, int maximum, int expected) {
-        SQRService sqrService = new SQRService();
-        int actual = SQRService.sqrcounter(minimum, maximum);
+    void shouldCountAmountOfSquares(String test, int minimum, int maximum, int expected) {
+        SQRService service = new SQRService();
+        int actual = service.countAmountOfSquares(minimum, maximum);
         assertEquals(expected, actual);
     }
 
